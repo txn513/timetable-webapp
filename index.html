@@ -7,19 +7,77 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
 </head>
 <body>
-	<div data-role="page">
+	<div data-role="page" id="index" >
+		<div data-role="header" data-position="fixed">
+			<h1>列车时刻表</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form>
+				<div class="ui-field-contain">
+					<label>发车站</label>
+					<input type="text" name="station_start" id="startstation">
+				</div>
+				<div class="ui-field-contain">
+					<label>终点站</label>
+					<input type="text" name="station_end" id="endstation">
+				</div>
+				<div class="ui-field-contain">
+					<label>车次</label>
+					<input type="text" name="station_no" id="station-no">
+				</div>
+				<input type="button" id="submit" value="搜索">
+			</form>
+			<ul data-role="listview" data-inset="true" id="trian-list">
+				
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#">导航1</a></li>
+					<li><a href="#">导航2</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="index2" data-position="fixed">
 		<div data-role="header">
 			<h1>列车时刻表</h1>
 		</div>
-		<div data-role="content">
-			<p>1111111</p>
+		<div data-role="main" class="ui-content">
+			<table data-role="table" class="ui-reponsive" data-mode="reflow">
+				<thead>
+					<tr>
+						<th>111</th>
+						<th>222</th>
+						<th>333</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>111</td>
+						<td>111</td>
+						<td>111</td>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td>111</td>
+						<td>111</td>
+					</tr>
+					<tr>
+						<td>111</td>
+						<td>111</td>
+						<td>111</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<div data-role="footer">
-			<p>11111</p>
 		</div>
 	</div>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/timetable.js"></script>
 	
 </body>
 </html>
