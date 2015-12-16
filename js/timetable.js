@@ -5,11 +5,10 @@ $(document).on("pageinit","#index", function(){
     var url2 = "www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getStationAndTimeDataSetByLikeTrainCode?UserID=";
     var url3 = "www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getDetailInfoByTrainCode?UserID=";
 
-	$('#submit').on('click', getTrianByCode);
+	$('#submit').on('click', getTrianList);
 
-	//function getTrianByName (){}
-
-	function getTrianByCode (){
+	//获取列车列表
+	function getTrianList (){
 		 $('#submit').button("option", "disabled", true);
 
 		 $.mobile.loading("show");
@@ -54,14 +53,11 @@ $(document).on("pageinit","#index", function(){
 			});
 			$.mobile.loading("hide");
 			$('#submit').button("option", "disabled", false);
-
-			//return false;
-			// $.get(urlPre + _url, _data, function(data){
-			// 	console.log(data);
-			// });
 		}
 		else {
 			alert("请输入发车站和终点站或输入车次");
 		}
 	}
+
+	function getTrianDetail(){}
 });
