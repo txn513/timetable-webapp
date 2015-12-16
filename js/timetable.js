@@ -25,7 +25,33 @@ $(document).on("pageinit","#index", function(){
 				_data.StartStation = $("#search-begin").val();
                 _data.ArriveStation = $("#search-end").val();
 			}
-			
+			$.ajax({
+				type: "GET",
+				url: urlPre + _url,
+				data: _data,
+				success: function(data){
+					$("#trian-list").html('');
+					var list = $("#trian-list");
+					var timeTable = $(data).find("TimeTable");
+					var trainCode = timeTable.find('TrainCode');
+					var firstStation = timeTable.find('FirstStation');
+					var lastStation = timeTable.find('LastStation');
+					var useDate = timeTable.find('UseDate');
+					var startTime = timeTable.find('StartTime');
+					var html = '';
+
+					for(var i = 0; i < 10; i++){
+						html += "<li><a href='#'><h2>"+ trainCode[i].innerHTML + "次"
+						+ "</h2><p>"+ firstStation[i].innerHTML
+						+ " - "+ lastStation[i].innerHTML +"</p><p>用时："+ useDate[i].innerHTML 
+						+"</p><p class='ui-li-aside'>"+ startTime[i].innerHTML +" 开</p></a></li>";	
+					}
+					if(html){
+						list.html(html);
+						list.listview("refresh");
+					}
+				}
+			});
 			$.mobile.loading("hide");
 			$('#submit').button("option", "disabled", false);
 
