@@ -3,7 +3,7 @@
 <img src="/screenshot/2.png" alt="sreenshot">
 <img src="/screenshot/3.png" alt="sreenshot">
 
-用户可根据出发站和终点站或者列次来搜索列车表
+用户可根据出发站和终点站或者车次来搜索列车表
 
 点击每个列表可查看列车详细信息
 
