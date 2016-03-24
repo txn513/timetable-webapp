@@ -4,10 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<title>列车时刻表</title>
-	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/themes/custom.min.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.4.5.min.css">
+
+	<!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"> -->
+	
 </head>
+
 <body>
-	<div data-role="page" id="index" >
+
+	<div data-role="page" id="index" data-theme="a" >
 		<div data-role="header" data-position="fixed">
 			<h1>列车时刻表</h1>
 		</div>
@@ -40,44 +47,46 @@
 			</div>
 		</div>
 	</div>
-	<div data-role="page" id="index2" data-position="fixed">
-		<div data-role="header">
+	<div data-role="page" id="detail" data-position="fixed">
+		<div data-role="header" >
+			<a class="ui-btn-left ui-btn-corner-all ui-btn ui-icon-home ui-btn-icon-notext" data-role='button' title="home" href="#index"></a>
 			<h1>列车时刻表</h1>
 		</div>
 		<div data-role="main" class="ui-content">
-			<table data-role="table" class="ui-reponsive" data-mode="reflow">
+			<h2></h2>
+			<table data-role="table" id="table-list" data-mode="reflow" class="ui-responsive ui-shadow table-stripe">
 				<thead>
-					<tr>
-						<th>111</th>
-						<th>222</th>
-						<th>333</th>
-					</tr>
+					<th>列次类型</th>
+					<th>出发站</th>
+					<th>终点站</th>
+					<th>发车时间</th>
+					<th>到达时间</th>
+					<th>运行时间</th>
+					<th>里程</th>
+				
 				</thead>
 				<tbody>
-					<tr>
-						<td>111</td>
-						<td>111</td>
-						<td>111</td>
-					</tr>
-					<tr>
-						<td>111</td>
-						<td>111</td>
-						<td>111</td>
-					</tr>
-					<tr>
-						<td>111</td>
-						<td>111</td>
-						<td>111</td>
-					</tr>
+					
 				</tbody>
 			</table>
+
+			
+			<a class="ui-btn" href="#index" data-transition="slideup">回到主页</a>
 		</div>
-		<div data-role="footer">
+		<div data-role="footer" data-positon="fixed">
 		</div>
 	</div>
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/timetable.js"></script>
-	
+	<script>
+		$(document).on('mobileinit',function(){
+			$.mobile.loader.prototype.options.text = '正在加载中';
+			$.mobile.loader.prototype.options.textVisble = true;
+			$.mobile.loader.prototype.options.text = 'a';
+			$.mobile.loader.prototype.options.textonly = false;
+
+		})
+	</script>
 </body>
 </html>
