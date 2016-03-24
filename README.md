@@ -1,8 +1,8 @@
 # 列车时刻表 -- 一个基于jQuery Mobile的webapp
 
-<img src="/screenshot/1.jpeg" alt="sreenshot">
-<img src="/screenshot/2.jpeg" alt="sreenshot">
-<img src="/screenshot/2.jpeg" alt="sreenshot">
+<img src="/screenshot/1.png" alt="sreenshot">
+<img src="/screenshot/2.png" alt="sreenshot">
+<img src="/screenshot/2.png" alt="sreenshot">
 
 用户可根据出发站和终点站或者列次来搜索列车表
 
