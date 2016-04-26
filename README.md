@@ -1,6 +1,7 @@
 # 列车时刻表 -- 一个基于jQuery Mobile的webapp
 
 <img src="/screenshot/2.png" alt="sreenshot">
+<br>
 <img src="/screenshot/3.png" alt="sreenshot">
 
 ## Overview 概要
